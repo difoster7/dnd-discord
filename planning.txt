@@ -1,0 +1,33 @@
+Modules:
+    1. Discord Bot
+    2. Player/Character
+    3. Towns
+
+1. Discord Bot
+
+- interfaces with discord
+- performs automatic weekly refreshes
+    - new week listener?
+
+2. Player/Character
+
+- limits number of characters per player
+    - 1? Options for multiple? How to switch between active?
+- tracks inventories
+    - food/gold/downtime days/etc...
+- tracks statistics
+    - days played, num sessions, etc...
+- tracks current projects
+- Need to separate player and character modules? Probably
+
+
+3. Towns
+
+- Tracks town statistics
+    - treasury, current events
+- Some sort of market functions
+- Events!
+    - Happiness/other stats can trigger or enable different events
+
+
+How to back things up? Save to HDD between sessions, then load when starting back up? autosaving?
