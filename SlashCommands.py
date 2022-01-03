@@ -1,7 +1,6 @@
 # Using enhanced-discord.py
 # https://github.com/iDevision/enhanced-discord.py
 
-
 import discord
 from discord.ext import commands
 
@@ -39,6 +38,7 @@ async def only_message(ctx: commands.Context):
 
 @bot.command()
 async def kill(ctx: commands.Context):
+    # This kills the bot
     await ctx.send("Good bye")
     exit(0)
 
@@ -52,6 +52,7 @@ async def kill(ctx: commands.Context):
 #     await ctx.send('pong')
 
 
+with open('botID') as f:
+    _ID = f.readline()
 
-
-bot.run('OTI3NjQzNTM2NDk1NjExOTE2.YdNNXQ.aF2ijAVPs5iMV_a64F7f1tdEZko')
+bot.run(_ID)
