@@ -1,9 +1,12 @@
 # Using enhanced-discord.py
 # https://github.com/iDevision/enhanced-discord.py
+# API: https://enhanced-dpy.readthedocs.io/en/latest/api.html
+
 
 import discord
 from discord.ext import commands
 import logging
+from Settlement import Settlement
 
 logging.basicConfig(level=logging.INFO)
 
@@ -37,6 +40,14 @@ async def only_slash(ctx: commands.Context):
 async def only_message(ctx: commands.Context):
     # This command can only be used with a message
     await ctx.send("Hello from message commands!")
+
+@bot.command()
+async def new_settlement(
+        ctx: commands.Context, name: str = commands.Option(description='The name of the settlement')):
+    settlement1 = Settlement(name)
+    print(settlement1)
+    await ctx.send(settlement1)
+
 
 
 # @bot.command()
