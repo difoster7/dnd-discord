@@ -3,6 +3,9 @@
 
 import discord
 from discord.ext import commands
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 bot = commands.Bot("!", intents=discord.Intents(guilds=True, messages=True), slash_commands=True, slash_command_guilds=[927635655989805076])
 
@@ -36,11 +39,11 @@ async def only_message(ctx: commands.Context):
     await ctx.send("Hello from message commands!")
 
 
-@bot.command()
-async def kill(ctx: commands.Context):
-    # This kills the bot
-    await ctx.send("Good bye")
-    exit(0)
+# @bot.command()
+# async def kill(ctx: commands.Context):
+#     # This kills the bot
+#     await ctx.send("Goodbye")
+#     exit(0)
 
 
 # intents = discord.Intents.all()
