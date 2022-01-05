@@ -44,9 +44,24 @@ async def only_message(ctx: commands.Context):
 @bot.command()
 async def new_settlement(
         ctx: commands.Context, name: str = commands.Option(description='The name of the settlement')):
+    # This command adds creates a new settlement
     settlement1 = Settlement(name)
     print(settlement1)
     await ctx.send(settlement1)
+
+@bot.command()
+async def role_test(ctx: commands.Context):
+    # Are you a tester?
+    is_tester = False
+    caller = ctx.author
+    for role in caller.roles:
+        if role.name == 'tester':
+            is_tester = True
+    if is_tester:
+        await ctx.send(str(ctx.author) + ' has the tester role!')
+    else:
+        await ctx.send(str(ctx.author) + ' does not have the tester role.')
+
 
 
 
