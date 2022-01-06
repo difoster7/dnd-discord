@@ -31,3 +31,28 @@ Modules:
 
 
 How to back things up? Save to HDD between sessions, then load when starting back up? autosaving?
+
+when a new user joins the server:
+
+- create a new user object
+- User paramenters:
+    Join date
+    games played
+    num characters allowed
+    list of characters
+    active character
+- user can create a character with /new_character command
+    - After creating a new character, user will be asked if they want to
+      make it their active character
+
+Character Class:
+
+paramenters:
+    inventory (gold, food, stone, wood)
+    current_settlement
+    earn rate
+    current_projects (crafting, other stuff?)
+
+functions:
+    earn
+    others i'm sure
