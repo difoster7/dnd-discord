@@ -17,10 +17,11 @@ class Settlement:
         self.buildings_in_progress = []
         self.current_events = []
 
+        self.food = 0
         self.gold = 0
         self.stone = 0
         self.wood = 0
-        self.food = 0
+
 
         # Production values are per week
         self.gold_prod = 0

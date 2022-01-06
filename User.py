@@ -1,10 +1,12 @@
 # User Class
 from datetime import date
+from Character import Character
+
 
 class User:
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, user_id):
+        self.user_id = user_id
         self.join_date = date.today()
         self.games_played = 0
         self.character_slots = 1
@@ -21,7 +23,7 @@ class User:
             return -1
         else:
             try:
-                self.characters.append(None) # Fix when characters exist
+                self.characters.append(Character(char_name))
             except BaseException:
                 # Add something in here that prints to an error log
                 return -2

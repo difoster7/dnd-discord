@@ -28,6 +28,9 @@ Modules:
 - Some sort of market functions
 - Events!
     - Happiness/other stats can trigger or enable different events
+- Weekly refresh
+    - performs refresh on each character
+    - performs its own refresh (market update, growth)
 
 
 How to back things up? Save to HDD between sessions, then load when starting back up? autosaving?
@@ -35,7 +38,7 @@ How to back things up? Save to HDD between sessions, then load when starting bac
 when a new user joins the server:
 
 - create a new user object
-- User paramenters:
+- User parameters:
     Join date
     games played
     num characters allowed
@@ -47,7 +50,9 @@ when a new user joins the server:
 
 Character Class:
 
-paramenters:
+every day a character does something other than earn, costs 1 food.
+
+parameters:
     inventory (gold, food, stone, wood)
     current_settlement
     earn rate
@@ -56,3 +61,8 @@ paramenters:
 functions:
     earn
     others i'm sure
+
+Project Class
+
+parameters:
+    requirements (food, gold, stone, wood, any special resources, working days)
