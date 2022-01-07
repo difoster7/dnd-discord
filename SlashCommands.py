@@ -2,6 +2,7 @@
 # https://github.com/iDevision/enhanced-discord.py
 # API: https://enhanced-dpy.readthedocs.io/en/latest/api.html
 
+# Client in the API refers to the bot/the code
 
 import discord
 from discord.ext import commands
@@ -10,7 +11,7 @@ from Settlement import Settlement
 
 logging.basicConfig(level=logging.INFO)
 
-bot = commands.Bot("!", intents=discord.Intents(guilds=True, messages=True), slash_commands=True, slash_command_guilds=[927635655989805076])
+bot = commands.Bot("!", intents=discord.Intents(members=True, messages=True), slash_commands=True, slash_command_guilds=[927635655989805076])
 
 @bot.event
 async def on_ready():
